@@ -2,7 +2,9 @@
 
 This branch is for developing the application using Vue JS.
 
-<details><summary>Vue JS Instructions<summary>
+<details>
+    
+<summary>Vue JS Instructions<summary>
 
 This template should help get you started developing with Vue 3 in Vite.
 
