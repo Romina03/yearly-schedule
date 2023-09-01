@@ -7,10 +7,8 @@ import { getCurrentYear } from "./utils/common"
     <header>
         <h1>Schedule for {{ getCurrentYear() }}</h1>
     </header>
-    <main>
-        <span id="months-container">
-            <CalendarMonth v-for="month in 12" :key="month" :monthNum="month" />
-        </span>
+    <main id="months-container">
+        <CalendarMonth v-for="month in 12" :key="month" :monthNum="month" />
     </main>
 </template>
 
