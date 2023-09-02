@@ -6,8 +6,8 @@ const props = defineProps<{
     monthNum: number
 }>()
 
-let monthName = monthNumToName(props.monthNum)
-let dates = getDaysInMonth(props.monthNum)
+const monthName = monthNumToName(props.monthNum)
+const dates = getDaysInMonth(props.monthNum)
 </script>
 
 <template>
