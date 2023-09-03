@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear()
         <h1>Schedule for {{ currentYear }}</h1>
     </header>
     <main>
-        <CalendarMonth v-for="month in 12" :key="month" :monthNum="month" :year="currentYear" />
+        <CalendarMonth v-for="month in 12" :key="month" :month-num="month" :year="currentYear" />
     </main>
 </template>
 
