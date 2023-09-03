@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import CalendarMonth from "./CalendarMonth.vue"
-import { getCurrentYear } from "../utils/common"
 
-const currentYear = getCurrentYear()
+const currentYear = new Date().getFullYear()
 </script>
 
 <template>

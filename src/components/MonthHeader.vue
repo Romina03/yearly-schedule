@@ -1,15 +1,17 @@
 <script setup lang="ts">
-import { monthNumToName } from "../utils/common"
-
 const props = defineProps<{
     monthNum: number
 }>()
+
+const monthName = Intl.DateTimeFormat("en", { month: "long" }).format(
+    new Date(props.monthNum.toString())
+)
 </script>
 
 <template>
     <thead>
         <tr>
-            <th>{{ monthNumToName(props.monthNum) }}</th>
+            <th>{{ monthName }}</th>
         </tr>
     </thead>
 </template>
