@@ -1,24 +1,26 @@
 <script setup lang="ts">
 import CalendarDate from "./CalendarDate.vue"
-import { monthNumToName, getDaysInMonth } from "../utils/common"
+import MonthHeader from "./MonthHeader.vue"
+import { getDaysInMonth, isWeekend } from "../utils/common"
 
 const props = defineProps<{
     monthNum: number
+    year: number
 }>()
 
-const monthName = monthNumToName(props.monthNum)
 const dates = getDaysInMonth(props.monthNum)
 </script>
 
 <template>
     <table>
-        <thead>
-            <tr>
-                <th>{{ monthName }}</th>
-            </tr>
-        </thead>
+        <MonthHeader :month-num="monthNum" />
         <tbody>
-            <CalendarDate v-for="date in dates" :key="date" :date="date" />
+            <CalendarDate
+                v-for="date in dates"
+                :key="date"
+                :date="date"
+                :is-weekend="isWeekend(year, monthNum, date)"
+            />
         </tbody>
     </table>
 </template>
