@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Calendar</title>
 </head>
-<body>
-    <h1>Schedule</h1>
-    <div class="calendar">
+<body onload="loadRows()">
+    <h1>Yearly Schedule 2023</h1>
+    <div class="schedule">
     <table>
         <tr>
             <thead>
@@ -30,62 +30,6 @@
             </thead>
 
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>28</td>
-                    <td>28</td>
-                    <td>28</td>
-                    <td>28</td>
-                    <td>28</td>
-                    <td>28</td>
-                    <td>28</td>
-                    <td>28</td>
-                    <td>28</td>
-                    <td>28</td>
-                    <td>28</td>
-                    <td>28</td>
-                </tr>
                 <tr>
                     <td>29</td>
                     <td class="empty"></td>
@@ -135,5 +79,22 @@
     </table>
         
 </div>
+
+<script>
+    function loadRows() {
+        let schedule = document.querySelector("table");
+
+        for (let dates=28; dates > 0; dates--) {
+            let newRow = schedule.insertRow(1);
+            for (let months=1; months <= 12; months++) {
+                let newDate = document.createElement('td');
+                newDate.innerHTML = dates;
+                newRow.appendChild(newDate);
+            }
+            
+        }
+}
+</script>
+
 </body>
 </html>

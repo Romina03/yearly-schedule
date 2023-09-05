@@ -3,7 +3,7 @@ h1 {
     padding: 15px;
 }
 
-.calendar {
+.schedule {
     display: flex;
     justify-content: center;
 }
@@ -18,10 +18,11 @@ table, th, td {
 }
 
 th {
-    padding: 5px 20px;
+    padding: 10px 20px;
 }
 
   
 td {
     text-align: center;
+    padding: 5px 15px;
 }
