@@ -12,6 +12,10 @@ h1 {
     border: none;
 }
 
+.task {
+    padding: 3px 35px;
+}
+
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -24,5 +28,5 @@ th {
   
 td {
     text-align: center;
-    padding: 5px 15px;
+    padding: 3px 15px;
 }

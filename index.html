@@ -13,65 +13,65 @@
     <table>
         <tr>
             <thead>
-                <th>January</th>
-                <th>February</th>
-                <th>March</th>
-                <th>April</th>
-                <th>May</th>
-                <th>June</th>
-                <th>July</th>
-                <th>August</th>
-                <th>September</th>
-                <th>October</th>
-                <th>November</th>
-                <th>December</th>
+                <th colspan="2">January</th>
+                <th colspan="2">February</th>
+                <th colspan="2">March</th>
+                <th colspan="2">April</th>
+                <th colspan="2">May</th>
+                <th colspan="2">June</th>
+                <th colspan="2">July</th>
+                <th colspan="2">August</th>
+                <th colspan="2">September</th>
+                <th colspan="2">October</th>
+                <th colspan="2">November</th>
+                <th colspan="2">December</th>
                 </div>
                 
             </thead>
 
             <tbody>
                 <tr>
-                    <td>29</td>
-                    <td class="empty"></td>
-                    <td>29</td>
-                    <td>29</td>
-                    <td>29</td>
-                    <td>29</td>
-                    <td>29</td>
-                    <td>29</td>
-                    <td>29</td>
-                    <td>29</td>
-                    <td>29</td>
-                    <td>29</td>
-                </tr>
+                    <td>29</td> <td class="task"></td>
+                    <td class="empty"> </td><td class="empty"></td>
+                    <td>29</td> <td ></td>
+                    <td>29</td> <td></td>
+                    <td>29</td> <td></td>
+                    <td>29</td> <td></td>
+                    <td>29</td> <td></td>
+                    <td>29</td> <td></td>
+                    <td>29</td> <td></td>
+                    <td>29</td> <td></td>
+                    <td>29</td> <td></td>
+                    <td>29</td> <td></td>
+                </tr> 
                 <tr>
-                    <td>30</td>
-                    <td class="empty"></td>
-                    <td>30</td>
-                    <td>30</td>
-                    <td>30</td>
-                    <td>30</td>
-                    <td>30</td>
-                    <td>30</td>
-                    <td>30</td>
-                    <td>30</td>
-                    <td>30</td>
-                    <td>30</td>
+                    <td>30</td> <td class="task"></td>
+                    <td class="empty"></td> <td class="empty"></td>
+                    <td>30</td> <td></td>
+                    <td>30</td> <td></td>
+                    <td>30</td> <td></td>
+                    <td>30</td> <td></td>
+                    <td>30</td> <td></td>
+                    <td>30</td> <td></td>
+                    <td>30</td> <td></td>
+                    <td>30</td> <td></td>
+                    <td>30</td> <td></td>
+                    <td>30</td> <td></td>
                 </tr>
 
                 <tr>
-                    <td>31</td>
-                    <td class="empty"></td>
-                    <td>31</td>
-                    <td class="empty"></td>
-                    <td>31</td>
-                    <td class="empty"></td>
-                    <td>31</td>
-                    <td>31</td>
-                    <td class="empty"></td>
-                    <td>31</td>
-                    <td class="empty"></td>
-                    <td>31</td>
+                    <td>31</td> <td class="task"></td>
+                    <td class="empty"></td> <td class="empty"></td>
+                    <td>31</td> <td></td>
+                    <td class="empty"></td> <td class="empty"></td>
+                    <td>31</td><td></td>
+                    <td class="empty"></td> <td class="empty"></td>
+                    <td>31</td> <td></td>
+                    <td>31</td> <td></td>
+                    <td class="empty"></td> <td class="empty"></td>
+                    <td>31</td> <td></td>
+                    <td class="empty"></td> <td class="empty"></td>
+                    <td>31</td> <td></td>
                 </tr>
                 
             </tbody>
@@ -88,8 +88,12 @@
             let newRow = schedule.insertRow(1);
             for (let months=1; months <= 12; months++) {
                 let newDate = document.createElement('td');
+                let task = document.createElement('td');
                 newDate.innerHTML = dates;
+                task.innerHTML = "";
+                task.classList.add("task");
                 newRow.appendChild(newDate);
+                newRow.appendChild(task);
             }
             
         }
