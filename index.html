@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Calendar</title>
 </head>
-<body onload="loadRows(); colourWeekends()">
+<body onload="loadRows(); colourWeekends();">
     <h1>Yearly Schedule 2023</h1>
     <div class="schedule">
     <table>
@@ -31,47 +31,47 @@
 
             <tbody>
                 <tr class="row29">
-                    <td>29</td> <td class="task"></td>
-                    <td class="empty"> </td><td class="empty"></td>
-                    <td>29</td> <td ></td>
-                    <td>29</td> <td></td>
-                    <td>29</td> <td></td>
-                    <td>29</td> <td></td>
-                    <td>29</td> <td></td>
-                    <td>29</td> <td></td>
-                    <td>29</td> <td></td>
-                    <td>29</td> <td></td>
-                    <td>29</td> <td></td>
-                    <td>29</td> <td></td>
+                    <td class="jan">29</td> <td class="task"></td>
+                    <td class="feb empty"> </td><td class="empty"></td>
+                    <td class="march">29</td> <td ></td>
+                    <td class="april">29</td> <td></td>
+                    <td class="may">29</td> <td></td>
+                    <td class="june">29</td> <td></td>
+                    <td class="july">29</td> <td></td>
+                    <td class="aug">29</td> <td></td>
+                    <td class="sept">29</td> <td></td>
+                    <td class="oct">29</td> <td></td>
+                    <td class="nov">29</td> <td></td>
+                    <td class="dec">29</td> <td></td>
                 </tr> 
                 <tr class="row30">
-                    <td>30</td> <td class="task"></td>
-                    <td class="empty"></td> <td class="empty"></td>
-                    <td>30</td> <td></td>
-                    <td>30</td> <td></td>
-                    <td>30</td> <td></td>
-                    <td>30</td> <td></td>
-                    <td>30</td> <td></td>
-                    <td>30</td> <td></td>
-                    <td>30</td> <td></td>
-                    <td>30</td> <td></td>
-                    <td>30</td> <td></td>
-                    <td>30</td> <td></td>
+                    <td class="jan">30</td> <td class="task"></td>
+                    <td class="feb empty"></td> <td class="empty"></td>
+                    <td class="march">30</td> <td></td>
+                    <td class="april">30</td> <td></td>
+                    <td class="may">30</td> <td></td>
+                    <td class="june">30</td> <td></td>
+                    <td class="july">30</td> <td></td>
+                    <td class="aug">30</td> <td></td>
+                    <td class="sept">30</td> <td></td>
+                    <td class="oct">30</td> <td></td>
+                    <td class="nov">30</td> <td></td>
+                    <td class="dec">30</td> <td></td>
                 </tr>
 
                 <tr class="row31">
-                    <td>31</td> <td class="task"></td>
-                    <td class="empty"></td> <td class="empty"></td>
-                    <td>31</td> <td></td>
-                    <td class="empty"></td> <td class="empty"></td>
-                    <td>31</td><td></td>
-                    <td class="empty"></td> <td class="empty"></td>
-                    <td>31</td> <td></td>
-                    <td>31</td> <td></td>
-                    <td class="empty"></td> <td class="empty"></td>
-                    <td>31</td> <td></td>
-                    <td class="empty"></td> <td class="empty"></td>
-                    <td>31</td> <td></td>
+                    <td class="jan">31</td> <td class="task"></td>
+                    <td class="feb empty"></td> <td class="empty"></td>
+                    <td class="march">31</td> <td></td>
+                    <td class="april empty"></td> <td class="empty"></td>
+                    <td class="may">31</td><td></td>
+                    <td class="june empty"></td> <td class="empty"></td>
+                    <td class="aug">31</td> <td></td>
+                    <td class="oct">31</td> <td></td>
+                    <td class="sept empty"></td> <td class="empty"></td>
+                    <td class="nov">31</td> <td></td>
+                    <td class="nov empty"></td> <td class="empty"></td>
+                    <td class="dec">31</td> <td></td>
                 </tr>
                 
             </tbody>
@@ -80,35 +80,7 @@
         
 </div>
 
-<script>
-    function loadRows() {
-        const monthsList = ["jan", "feb", "march", "april", "may", "june", "july", "aug", "sept", "oct", 
-        "nov", "dec"]
-        let schedule = document.querySelector("table");
-
-        for (let dates=28; dates > 0; dates--) {
-            let newRow = schedule.insertRow(1);
-            let className = "row" + dates;
-            newRow.classList.add(className);
-
-            for (let months=0; months <= 11; months++) {
-                let newDate = document.createElement('td');
-                let task = document.createElement('td');
-
-                newDate.innerHTML = dates;
-                newDate.classList.add(monthsList[months]);
-
-                task.innerHTML = "";
-                task.classList.add("task");
-
-                newRow.appendChild(newDate);
-                newRow.appendChild(task);
-            }
-            
-        }
-    }
-
-</script>
+<script src="index.js" charset="utf-8"></script>
 
 </body>
 </html>
