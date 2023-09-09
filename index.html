@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Calendar</title>
 </head>
-<body onload="loadRows()">
+<body onload="loadRows(); colourWeekends()">
     <h1>Yearly Schedule 2023</h1>
     <div class="schedule">
     <table>
@@ -30,7 +30,7 @@
             </thead>
 
             <tbody>
-                <tr>
+                <tr class="row29">
                     <td>29</td> <td class="task"></td>
                     <td class="empty"> </td><td class="empty"></td>
                     <td>29</td> <td ></td>
@@ -44,7 +44,7 @@
                     <td>29</td> <td></td>
                     <td>29</td> <td></td>
                 </tr> 
-                <tr>
+                <tr class="row30">
                     <td>30</td> <td class="task"></td>
                     <td class="empty"></td> <td class="empty"></td>
                     <td>30</td> <td></td>
@@ -59,7 +59,7 @@
                     <td>30</td> <td></td>
                 </tr>
 
-                <tr>
+                <tr class="row31">
                     <td>31</td> <td class="task"></td>
                     <td class="empty"></td> <td class="empty"></td>
                     <td>31</td> <td></td>
@@ -82,22 +82,32 @@
 
 <script>
     function loadRows() {
+        const monthsList = ["jan", "feb", "march", "april", "may", "june", "july", "aug", "sept", "oct", 
+        "nov", "dec"]
         let schedule = document.querySelector("table");
 
         for (let dates=28; dates > 0; dates--) {
             let newRow = schedule.insertRow(1);
-            for (let months=1; months <= 12; months++) {
+            let className = "row" + dates;
+            newRow.classList.add(className);
+
+            for (let months=0; months <= 11; months++) {
                 let newDate = document.createElement('td');
                 let task = document.createElement('td');
+
                 newDate.innerHTML = dates;
+                newDate.classList.add(monthsList[months]);
+
                 task.innerHTML = "";
                 task.classList.add("task");
+
                 newRow.appendChild(newDate);
                 newRow.appendChild(task);
             }
             
         }
-}
+    }
+
 </script>
 
 </body>

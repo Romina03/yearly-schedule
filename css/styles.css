@@ -16,6 +16,10 @@ h1 {
     padding: 3px 35px;
 }
 
+.row7 .jan, .row7 .jan + td, .row8 .jan, .row8 .jan + td  {
+     background-color: orange;
+}
+
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
